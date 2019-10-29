@@ -1,0 +1,24 @@
+version: 2 #circleCI バージョン 2019/10/29時点では2.1が最新
+# CIフロー実行単位を記述
+jobs:
+  test:
+    docker:
+      - image: circleci/ruby:2.6.5
+    working_directory: ~/repo
+
+    steps:
+      - checkout #最新のコードを取得
+      - run: #nameとcommandを定義
+          name: Run test #説明
+          command: ruby sum_test.rb # 実行するコマンド名
+      - run: #nameとcommandを定義
+          name: Run test #説明
+          command: ruby sum_test.rb # 実行するコマンド名
+  
+
+# jobsで定義したCIフローをどういった順番で実行するかを指定
+workflows:
+  version: 2
+  workflows:
+    jobs:
+      - test
