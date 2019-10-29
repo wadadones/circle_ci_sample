@@ -32,4 +32,6 @@ workflows:
   workflows:
     jobs:
       - test
-      - test_rspec
+      - test_rspec:
+          requires: #testが終わった後に走る
+            - test
