@@ -12,8 +12,8 @@ jobs:
           name: Run test #説明
           command: ruby sum_test.rb # 実行するコマンド名
       - run: #nameとcommandを定義
-          name: Run test #説明
-          command: ruby sum_test.rb # 実行するコマンド名
+          name: Run spec_test #説明
+          command: rspec # 実行するコマンド名
   
 
 # jobsで定義したCIフローをどういった順番で実行するかを指定
