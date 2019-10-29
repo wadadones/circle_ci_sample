@@ -20,7 +20,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - run: gem install rspec
+      - run: bundle install
       - run: rspec
 
 
